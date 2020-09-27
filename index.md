@@ -6,13 +6,13 @@
 
 <label>输入产品条码（如果不是条形码，请在最后一位后补充一个随机数字）</label>
 <br>
-<input id="handle" type="number"></input>
+<input id="handle" type="number">
 <br>
 
 <!-- -->
 <label>Result shows here:</label>
 <br>
-<input id="handleText" readonly></input>
+<input id="handleText" readonly>
 <br><button onclick="gen()">转换</button><br>
 
 <script>
