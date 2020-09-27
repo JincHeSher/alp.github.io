@@ -15,8 +15,6 @@
 <input id="handleText" readonly></input>
 <br><button onclick="gen()">转换</button><br>
 
-<iframe height="400" width="300" src="http://translate.google.com/translate" align="middle" border="0"></iframe>
-
 <script>
 
 function copyHandle(){
