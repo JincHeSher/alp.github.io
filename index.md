@@ -4,42 +4,42 @@
 <body>
 <h1>Product Registration</h1>
 
-<label>ÊäÈë²úÆ·ÌõÂë£¨Èç¹û²»ÊÇÌõÐÎÂë£¬ÇëÔÚ×îºóÒ»Î»ºó²¹³äÒ»¸öËæ»úÊý×Ö£©</label>
+<label>è¾“å…¥äº§å“æ¡ç ï¼ˆå¦‚æžœä¸æ˜¯æ¡å½¢ç ï¼Œè¯·åœ¨æœ€åŽä¸€ä½åŽè¡¥å……ä¸€ä¸ªéšæœºæ•°å­—ï¼‰</label>
 <br>
 <input id="handle" type="number"></input>
 <br>
 
-<label>ÊäÈë²úÆ·Ó¢ÎÄÃû³Æ</label>
+<label>è¾“å…¥äº§å“è‹±æ–‡åç§°</label>
 <br>
 <input id="enName" type="text"></input>
 <br>
 
-<label>ÊäÈë²úÆ·ÖÐÎÄÃû³Æ</label>
+<label>è¾“å…¥äº§å“ä¸­æ–‡åç§°</label>
 <br>
 <input id="cnName" type="text"></input>
 <br>
 
-<label>ÊäÈëÍøÕ¾ÊÛÂôµ¥Î»£¨ºÐ/box£¬´ü/bag¡¢pack£¬¸ö/EA£©</label>
+<label>è¾“å…¥ç½‘ç«™å”®å–å•ä½ï¼ˆç›’/boxï¼Œè¢‹/bagã€packï¼Œä¸ª/EAï¼‰</label>
 <br>
 <input id="soldByOnline" type="text"></input>
 <br>
 
-<label>ÊäÈëµêÄÚ¼Æ¼Ûµ¥Î»£¨°õ/LB£¬¸ö/EA£©</label>
+<label>è¾“å…¥åº—å†…è®¡ä»·å•ä½ï¼ˆç£…/LBï¼Œä¸ª/EAï¼‰</label>
 <br>
 <input id="soldByInstore" type="text"></input>
 <br>
 
-<label>ÊäÈë¹æ¸ñ£¨£©</label>
+<label>è¾“å…¥è§„æ ¼ï¼ˆï¼‰</label>
 <br>
 <input id="specs" type="text"></input>
 <br>
 
-<label>ÊäÈë×î´óÖØÁ¿</label>
+<label>è¾“å…¥æœ€å¤§é‡é‡</label>
 <br>
 <input id="weight" type="text"></input>
 <br>
 
-<label>ÊäÈëµêÄÚÊÛ¼Û</label>
+<label>è¾“å…¥åº—å†…å”®ä»·</label>
 <br>
 <input id="price" type="text"></input>
 <br>
@@ -48,7 +48,7 @@
 <label>Result shows here:</label>
 <br>
 <input id="handleText" readonly></input>
-<br><button onclick="gen()">×ª»»</button>
+<br><button onclick="gen()">è½¬æ¢</button>
 <script>
 
 function copyHandle(){
