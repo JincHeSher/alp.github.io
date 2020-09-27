@@ -9,40 +9,8 @@
 <input id="handle" type="number"></input>
 <br>
 
-<label>输入产品英文名称</label>
-<br>
-<input id="enName" type="text"></input>
-<br>
+<iframe height="1200" width="600" src="http://translate.google.com/translate?hl=bg&ie=UTF-8&u=YOUR_IFRAME_URL&sl=de&tl=bg" align="middle" border="0">
 
-<label>输入产品中文名称</label>
-<br>
-<input id="cnName" type="text"></input>
-<br>
-
-<label>输入网站售卖单位（盒/box，袋/bag、pack，个/EA）</label>
-<br>
-<input id="soldByOnline" type="text"></input>
-<br>
-
-<label>输入店内计价单位（磅/LB，个/EA）</label>
-<br>
-<input id="soldByInstore" type="text"></input>
-<br>
-
-<label>输入规格（）</label>
-<br>
-<input id="specs" type="text"></input>
-<br>
-
-<label>输入最大重量</label>
-<br>
-<input id="weight" type="text"></input>
-<br>
-
-<label>输入店内售价</label>
-<br>
-<input id="price" type="text"></input>
-<br>
 
 <!-- -->
 <label>Result shows here:</label>
