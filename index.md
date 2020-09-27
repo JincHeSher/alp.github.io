@@ -9,8 +9,6 @@
 <input id="handle" type="number"></input>
 <br>
 
-<iframe height="1200" width="600" src="http://translate.google.com/translate?hl=bg&ie=UTF-8&u=YOUR_IFRAME_URL&sl=de&tl=bg" align="middle" border="0">
-
 
 <!-- -->
 <label>Result shows here:</label>
