@@ -9,15 +9,14 @@
 <input id="handle" type="number"></input>
 <br>
 
-<iframe height="1200" width="600" src="http://translate.google.com/translate" align="middle" border="0"></iframe>
-
-
-
 <!-- -->
 <label>Result shows here:</label>
 <br>
 <input id="handleText" readonly></input>
 <br><button onclick="gen()">转换</button>
+
+<iframe height="1200" width="600" src="http://translate.google.com/translate" align="middle" border="0"></iframe>
+
 <script>
 
 function copyHandle(){
