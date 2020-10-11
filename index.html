@@ -1,59 +1,65 @@
 <html>
-<head><title>Handle Generator</title></head>
+	<head>
+		<title>Handle Generator</title>
+	</head>
 
-<body>
-<h1>Product Registration</h1>
+	<body>
+	
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<label>输入产品条码（如果不是条形码，请在最后一位后补充一个随机数字）</label>
-<br>
-<input id="handle" type="number">
-<br>
+		<h1>Product Registration</h1>
 
-<!-- -->
-<label>Result shows here:</label>
-<br>
-<input id="handleText" readonly>
-<br><button onclick="gen()">转换</button><br>
+		<label>输入产品条码（如果不是条形码，请在最后一位后补充一个随机数字）</label>
+		<br>
+		<input id="handle" type="number">
+		<br>
 
-<script>
+		
+		<label>Result shows here:</label>
+		<br>
+		<input id="handleText" readonly>
+		<br><button onclick="gen()">转换</button><br>
+		
+		<script>
+			/*复制条码输出*/
+		function copyHandle(){
+			var copyText = document.getElementById("handleText");
 
-function copyHandle(){
-	var copyText = document.getElementById("handleText");
+			/* Select the text field */
+			copyText.focus();
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
-	/* Select the text field */
-	copyText.focus();
-	copyText.select();
-	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+			/* Copy the text inside the text field */
+			document.execCommand("copy");
+		}
 
-	/* Copy the text inside the text field */
-	document.execCommand("copy");
-}
+		function gen(){
+			var tag=document.getElementById("handle");
+			var handle=tag.value; 
+			handle=handle.substring(0,handle.length-1);
+			
+			while (handle.length < 15) {
+				handle = '0' + handle;
+		    	}
+			
+			handle='alp-o'+handle;
+			var handleText=document.getElementById("handleText")
+			handleText.value=handle;
+			copyHandle();
+		}
 
-function gen(){
-	var tag=document.getElementById("handle");
-	var handle=tag.value; 
-	handle=handle.substring(0,handle.length-1);
-	while (handle.length < 15) {
-        handle = '0' + handle;
-    }
-	handle='alp-o'+handle;
+		document.onkeydown = function (e) {
+			e = e || window.event;
+		  	switch (e.which || e.keyCode) {
+			case 13 : gen();
+			break;
+		  }
+		}
 
-	var handleText=document.getElementById("handleText")
-	handleText.value=handle;
+		</script>
 
-	copyHandle();
-}
-
-document.onkeydown = function (e) {
-  e = e || window.event;
-  switch (e.which || e.keyCode) {
-        case 13 : gen();
-            break;
-  }
-}
-
-</script>
-
-</body>
-
+	</body>
 </html>
