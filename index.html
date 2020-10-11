@@ -4,7 +4,19 @@
 	</head>
 
 	<body>
-	
+		
+		<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 5px;
+		}
+		th {
+			text-align: left;
+		}
+		</style>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -23,7 +35,7 @@
 		
 		<input id="showBarcode" readonly>
 		<br><button onclick="showBarcode()">显示条码</button><br>
-		<div></div>
+		<table style="width:100%"></table>
 		
 		<script>
 			/*复制条码输出*/
@@ -65,7 +77,7 @@
 		function showBarcode(){
 			$.getJSON("https://jinchesher.github.io/alpBarcode/products.json", function(result){
             $.each(result, function(i, obj){
-                $("div").append(obj.部门 + " " + obj.条码 + " " + obj.英文名 + " "+obj.中文名 + "<br>");
+                $("table").append("<tr><td>"+obj.部门+"</td>" +"<td>"+ obj.条码 +"</td>" +"<td>"+obj.英文名 +"<td>"+"<td>"+obj.中文名 + "</td></tr>");
             });
 			});
 		}
