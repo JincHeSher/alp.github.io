@@ -22,6 +22,10 @@
 		<input id="handleText" readonly>
 		<br><button onclick="gen()">转换</button><br>
 		
+		<input id="showBarcode" readonly>
+		<br><button onclick="showBarcode()">显示条码</button><br>
+		<div></div>
+		
 		<script>
 			/*复制条码输出*/
 		function copyHandle(){
@@ -57,6 +61,14 @@
 			case 13 : gen();
 			break;
 		  }
+		}
+		
+		function showBarcode(){
+			$.getJSON("https://jinchesher.github.io/alpBarcode/products.json", function(result){
+            $.each(result, function(i, obj){
+                $("div").append(obj.部门 + " " + obj.条码 + " " + obj.英文名 + " "+obj.中文名 + "<br>");
+            });
+			});
 		}
 
 		</script>
