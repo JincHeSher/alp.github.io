@@ -39,6 +39,9 @@
 		<table style="width:100%"><tr><th>部门</th><th>条码</th><th>英文名</th><th>中文名</th></tr></table>
 		
 		<script>
+		
+			var shown=false;
+		
 			/*复制条码输出*/
 		function copyHandle(){
 			var copyText = document.getElementById("handleText");
@@ -76,11 +79,14 @@
 		}
 		
 		function showBarcode(){
-			$.getJSON("https://jinchesher.github.io/alpBarcode/products.json", function(result){
-            $.each(result, function(i, obj){
-                $("table").append("<tr><td>"+obj.部门+"</td>" +"<td>"+ obj.条码 +"</td>" +"<td>"+obj.英文名 +"</td>"+"<td>"+obj.中文名 + "</td></tr>");
-            });
-			});
+			if(shown==false){
+				$.getJSON("https://jinchesher.github.io/alpBarcode/data/products.json", function(result){
+					$.each(result, function(i, obj){
+						$("table").append("<tr><td>"+obj.部门+"</td>" +"<td>"+ obj.条码 +"</td>" +"<td>"+obj.英文名 +"</td>"+"<td>"+obj.中文名 + "</td></tr>");
+					});
+				});
+				shown=true;
+			}
 		}
 
 		</script>
